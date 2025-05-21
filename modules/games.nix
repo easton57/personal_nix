@@ -18,5 +18,7 @@
   environment.systemPackages = [
     pkgs.heroic
     pkgs.prismlauncher
+    pkgs.gamescope
+    pkgs.mangohud
   ];
 }
