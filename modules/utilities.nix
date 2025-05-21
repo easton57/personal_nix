@@ -2,6 +2,8 @@
 
 {
   environment.systemPackages = [
+    pkgs.deno
+    pkgs.cmake
     pkgs.tailscale
     pkgs.bluez
     pkgs.gcc

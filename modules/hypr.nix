@@ -11,6 +11,8 @@
   services.hypridle.enable = true;
 
   environment.systemPackages = [
+    pkgs.steam-run
+    pkgs.jq
     pkgs.ghostty
     pkgs.networkmanagerapplet
     pkgs.font-awesome
