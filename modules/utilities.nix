@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = [
+    pkgs.nvtopPackages.nvidia
     pkgs.deno
     pkgs.cmake
     pkgs.tailscale
