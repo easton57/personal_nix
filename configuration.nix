@@ -15,6 +15,7 @@
       ./modules/office.nix
       ./modules/graphics.nix
       ./modules/games.nix
+      ./modules/prime_graphics.nix
     ];
 
   # Bootloader.
@@ -82,12 +83,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   # Bluetooth enablement
@@ -152,21 +147,6 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };  
 
-  hardware.nvidia.prime = {
-    sync.enable = true; # May want to change this to offload mode later 
-
-	# Make sure to use the correct Bus ID values for your system!
-	intelBusId = "PCI:0:2:0";
-	nvidiaBusId = "PCI:1:0:0";
-  };
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  ];
-
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
@@ -174,5 +154,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
 }
