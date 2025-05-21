@@ -9,10 +9,14 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
+  # Angry electron for heroic
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-33.4.11"
+  ];
+
   # Others
   environment.systemPackages = [
-    pkgs.lutris
     pkgs.heroic
-    pkgs.minecraft
+    pkgs.prismlauncher
   ];
 }

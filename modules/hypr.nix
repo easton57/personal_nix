@@ -11,6 +11,13 @@
   services.hypridle.enable = true;
 
   environment.systemPackages = [
+    pkgs.ghostty
+    pkgs.networkmanagerapplet
+    pkgs.font-awesome
+    pkgs.hyprpaper
+    pkgs.hyprwall
+    pkgs.avizo
+    pkgs.dunst
     pkgs.waybar
     pkgs.wofi
     pkgs.dunst
