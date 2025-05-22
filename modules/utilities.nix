@@ -1,7 +1,23 @@
 { config, pkgs, ...}:
 
 {
+  # Virtmanager
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = [ "eseidel" ];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+
+  nixpkgs.overlays = [
+    (self: super: {
+      neovim = import ./neovim/neovim.nix { pkgs = super; };
+    })
+  ];
+
   environment.systemPackages = [
+    # Neovim
+    pkgs.neovim
+
+    # Unorganized
     pkgs.nvtopPackages.nvidia
     pkgs.deno
     pkgs.cmake
@@ -12,13 +28,13 @@
     pkgs.lshw
     pkgs.btop
     pkgs.fastfetch
-    pkgs.neovim
     pkgs.go
     pkgs.cargo
     pkgs.python3
     pkgs.prusa-slicer
     pkgs.ollama-cuda
     pkgs.git
+    pkgs.qemu
   ];
 
   # Tailscale service
