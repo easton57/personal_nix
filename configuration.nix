@@ -30,12 +30,25 @@
     };
   };
 
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Auto Upgrade
+  system.autoUpgrade.enable = true;
+
+  # ensure neovim and git are installed
+  environment.systemPackages = with pkgs; [
+        neovim
+        git
+        wget
+  ];
+
+  # Environment Variables
+  environment.variables.EDITOR = "nvim";
+
+  # Networking
   networking.hostName = "Nixtop"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -91,7 +104,7 @@
   services.blueman.enable = true;
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.eseidel = {
