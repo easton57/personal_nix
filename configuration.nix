@@ -52,9 +52,8 @@
     };
   };
 
-  # ensure neovim and git are installed
+  # ensure vim and git are installed
   environment.systemPackages = with pkgs; [
-        neovim
         git
         wget
   ];
