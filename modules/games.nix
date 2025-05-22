@@ -9,14 +9,8 @@
     localNetworkGameTransfers.openFirewall = true;
   };
 
-  # Angry electron for heroic
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-33.4.11"
-  ];
-
   # Others
   environment.systemPackages = [
-    pkgs.heroic
     pkgs.prismlauncher
     pkgs.gamescope
     pkgs.mangohud
