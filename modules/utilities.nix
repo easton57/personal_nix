@@ -37,6 +37,7 @@
     pkgs.ollama-cuda
     pkgs.git
     pkgs.qemu
+    pkgs.pgadmin4
   ];
 
   # Tailscale service
