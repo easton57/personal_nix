@@ -35,6 +35,22 @@
 
   # Auto Upgrade
   system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot  = true;
+
+  # Generation retention and optimization
+  nix = {
+    # Enable automatic garbage collection
+    gc = {
+      automatic = true; # Run garbage collection automatically
+      dates = "daily"; # Run once a week (you can also use "daily", "monthly", or a systemd timer like "03:00")
+      options = "--delete-older-than 14d"; # Delete generations older than 30 days
+    };
+    # Optimize the store to reduce disk usage
+    optimise = {
+      automatic = true; # Automatically optimize the store
+      dates = [ "weekly" ]; # Run optimization weekly
+    };
+  };
 
   # ensure neovim and git are installed
   environment.systemPackages = with pkgs; [
