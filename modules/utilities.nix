@@ -16,6 +16,8 @@
   environment.systemPackages = [
     # Neovim
     pkgs.neovim
+    pkgs.lldb
+    pkgs.delve
 
     # Unorganized
     pkgs.nvtopPackages.nvidia
