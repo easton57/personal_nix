@@ -7,6 +7,9 @@
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
 
+  # KDE Connect
+  programs.kdeconnect.enable = true;
+
   nixpkgs.overlays = [
     (self: super: {
       neovim = import ./neovim/neovim.nix { pkgs = super; };
@@ -38,7 +41,6 @@
     pkgs.git
     pkgs.qemu
     pkgs.pgadmin4
-    pkgs.kdePackages.kdeconnect-kde
   ];
 
   # Tailscale service
