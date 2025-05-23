@@ -16,6 +16,7 @@
       ./modules/graphics.nix
       ./modules/games.nix
       ./modules/prime_graphics.nix
+      ./modules/security.nix
     ];
 
   # Bootloader.
@@ -29,6 +30,9 @@
       device = "nodev";
     };
   };
+
+  # Polkit
+  security.polkit.enable = true;
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
