@@ -38,6 +38,7 @@
     pkgs.git
     pkgs.qemu
     pkgs.pgadmin4
+    pkgs.kdePackages.kdeconnect-kde
   ];
 
   # Tailscale service
