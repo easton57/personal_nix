@@ -10,6 +10,7 @@
   # KDE Connect
   programs.kdeconnect.enable = true;
 
+  # Custom neovim
   nixpkgs.overlays = [
     (self: super: {
       neovim = import ./neovim/neovim.nix { pkgs = super; };
