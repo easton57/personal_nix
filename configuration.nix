@@ -15,6 +15,7 @@
       ./modules/office.nix
       ./modules/graphics.nix
       ./modules/games.nix
+      ./modules/power_management.nix
       ./modules/prime_graphics.nix
       ./modules/security.nix
     ];
@@ -33,6 +34,9 @@
 
   # Polkit
   security.polkit.enable = true;
+
+  # Thunderbolt
+  services.hardware.bolt.enable = true;
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -58,6 +62,7 @@
 
   # ensure vim and git are installed
   environment.systemPackages = with pkgs; [
+        neovim
         git
         wget
   ];
@@ -169,7 +174,7 @@
     # supported GPUs is at: 
     # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
     # Only available from driver 515.43.04+
-    open = true;
+    open = false;
 
     # Enable the Nvidia settings menu,
 	# accessible via `nvidia-settings`.
