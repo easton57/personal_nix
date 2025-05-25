@@ -23,6 +23,10 @@
     pkgs.lldb
     pkgs.delve
 
+    # Cuda
+    pkgs.cudaPackages.cudatoolkit
+    pkgs.cudaPackages.cudnn
+
     # Unorganized
     pkgs.nvtopPackages.nvidia
     pkgs.deno
@@ -43,6 +47,12 @@
     pkgs.qemu
     pkgs.pgadmin4
   ];
+
+  # Ollama service
+  services.ollama = {
+    enable = true;
+    acceleration = "cuda";
+  };
 
   # Tailscale service
   services.tailscale.enable = true;
