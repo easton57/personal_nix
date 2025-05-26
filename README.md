@@ -15,7 +15,7 @@ Be sure to rebuild the bootloader if it wasn't installed with grub
 
 configuration.nix - Main configuration with system services, nvidia drivers, some basic system packages
 
-/modules/
+### /modules/
 
 * games.nix - Steam and such for gaming
 * hypr.nix - Desktop environment and related packages
@@ -28,7 +28,7 @@ configuration.nix - Main configuration with system services, nvidia drivers, som
 * power_management.nix - tlp management for laptop
 * security.nix - lxqt policy kit for prompting on some applications as hyprland doesn't have one that's native
 
-/modules/neovim
+### /modules/neovim
 
 This whole section is custom for practicing pulling packages from source. (0.11.1 is available via unstable repo)
 tree_sitter and utf8proc are needed as the stable versions available aren't compatible with the latest neovim source
