@@ -17,7 +17,6 @@
     pkgs.networkmanagerapplet
     pkgs.font-awesome
     pkgs.hyprpaper
-    pkgs.hyprwall
     pkgs.avizo
     pkgs.dunst
     pkgs.waybar
