@@ -21,7 +21,7 @@
     # Neovim
     pkgs.neovim
     pkgs.lldb
-    pkgs.delve
+    pkgs.delve # This is a package for debugging golang
 
     # Cuda
     pkgs.cudaPackages.cudatoolkit
