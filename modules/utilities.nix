@@ -45,8 +45,9 @@
     pkgs.ollama-cuda
     pkgs.git
     pkgs.qemu
-    pkgs.pgadmin4
-  ];
+    pkgs.pgadmin4-desktopmode
+    pkgs.nodejs_24
+    ];
 
   # Ollama service
   services.ollama = {
