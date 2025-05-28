@@ -47,6 +47,7 @@
     pkgs.qemu
     pkgs.pgadmin4-desktopmode
     pkgs.nodejs_24
+    pkgs.sway-contrib.grimshot
     ];
 
   # Ollama service
