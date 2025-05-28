@@ -18,7 +18,7 @@
       ./modules/power_management.nix
       ./modules/prime_graphics.nix
       ./modules/security.nix
-     ./modules/boot_animation.nix
+      ./modules/boot_animation.nix
     ];
 
   # Bootloader.
@@ -145,10 +145,17 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  
+
   # Nvidia Drivers (Applicable for laptop and desktop)
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
+    extraPackages = with pkgs; [
+      #vpl-gpu-rt
+      vaapiIntel
+      intel-media-driver
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland
