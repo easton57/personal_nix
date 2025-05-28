@@ -28,7 +28,7 @@
     pkgs.cudaPackages.cudnn
 
     # Unorganized
-    pkgs.nvtopPackages.nvidia
+    pkgs.nvtopPackages.full
     pkgs.deno
     pkgs.cmake
     pkgs.tailscale
