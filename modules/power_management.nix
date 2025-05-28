@@ -3,6 +3,9 @@
   # Disable power-profiles-daemon
   services.power-profiles-daemon.enable = false;
 
+  # Keep awake if plugged in and lid closed
+  services.logind.lidSwitchExternalPower = "ignore";
+
   # TLP enablement for laptop management
   services.tlp = {
       enable = true;
