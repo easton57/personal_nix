@@ -24,8 +24,8 @@
       "rd.systemd.show_status=auto"
     ];
 
-    # Show grub for 5 seconds (got a little stuck once and am now scared)
-    loader.timeout = 5;
+    # Show grub for 3 seconds (got a little stuck once and am now scared)
+    loader.timeout = 3;
   };
 }
 

@@ -18,6 +18,7 @@
       ./modules/power_management.nix
       ./modules/prime_graphics.nix
       ./modules/security.nix
+     ./modules/boot_animation.nix
     ];
 
   # Bootloader.
