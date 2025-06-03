@@ -10,7 +10,7 @@
   };
 
   # Others
-  environment.systemPackages = [
+  home.packages = [
     pkgs.prismlauncher
     pkgs.gamescope
     pkgs.mangohud

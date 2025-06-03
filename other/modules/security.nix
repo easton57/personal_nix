@@ -1,7 +1,7 @@
 { pkgs, ...}:
 
 {
-  environment.systemPackages = [
+  home.packages = [
     # Needed for gparted and other packages needing authentication
     pkgs.lxqt.lxqt-policykit
 

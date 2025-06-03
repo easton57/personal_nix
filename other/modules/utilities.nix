@@ -17,7 +17,7 @@
     })
   ];
 
-  environment.systemPackages = [
+  home.packages = [
     # Neovim
     pkgs.neovim
     pkgs.lldb
@@ -50,13 +50,4 @@
     pkgs.nodejs_24
     pkgs.sway-contrib.grimshot
     ];
-
-  # Ollama service
-  services.ollama = {
-    enable = true;
-    acceleration = "cuda";
-  };
-
-  # Tailscale service
-  services.tailscale.enable = true;
 }

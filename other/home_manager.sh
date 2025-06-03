@@ -12,3 +12,5 @@ nix-shell '<home-manager>' -A install
 nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
 nix-channel --update
 
+# Install hyprland
+sudo dnf install -y hyprland

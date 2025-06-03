@@ -3,6 +3,7 @@
 {
   imports = [
     ./modules/graphics.nix
+    ./modules/games.nix
   ];
 
   # Allow unfree
