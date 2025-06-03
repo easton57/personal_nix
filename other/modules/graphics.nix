@@ -1,21 +1,18 @@
-{ pkgs, ...}:
+{ config, pkgs, ...}:
 
 let
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  
+  # Blender with Cuda
+  overlays = self: super: {
+    blenderWithCuda = unstable.blender.override {
+      cudaSupport = true;
+      cudaPackages = super.cudaPackages;
+    };
+  };
 in
 {
-  # Blender with Cuda
-  nixpkgs.overlays = [
-      (self: super: {
-          blenderWithCuda = unstable.blender.override {
-              cudaSupport = true;
-              cudaPackages = super.cudaPackages;
-          };
-      })
-  ];
-
-
-  environment.systemPackages = [
+  home.packages = [
     unstable.blender
     pkgs.godot_4
     pkgs.krita
