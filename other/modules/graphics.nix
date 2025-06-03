@@ -1,7 +1,7 @@
 { config, pkgs, ...}:
 
 let
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+  unstable = import <nixos-unstable> { config.allowUnfree = true; };
   
   # Blender with Cuda
   overlays = self: super: {

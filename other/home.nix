@@ -2,7 +2,7 @@
 
 {
   imports = [
-    "./modules/graphics.nix"
+    ./modules/graphics.nix
   ];
 
   programs.home-manager.enable = true;
