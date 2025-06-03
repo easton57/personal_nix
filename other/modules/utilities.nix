@@ -1,15 +1,6 @@
 { config, pkgs, ...}:
 
 {
-  # Virtmanager
-  programs.virt-manager.enable = true;
-  users.groups.libvirtd.members = [ "eseidel" ];
-  virtualisation.libvirtd.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
-
-  # KDE Connect
-  programs.kdeconnect.enable = true;
-
   # Custom neovim
   nixpkgs.overlays = [
     (self: super: {
@@ -28,6 +19,7 @@
     pkgs.cudaPackages.cudnn
 
     # Unorganized
+    pkgs.virt-manager
     pkgs.dotnetCorePackages.sdk_8_0_3xx
     pkgs.nvtopPackages.full
     pkgs.deno
