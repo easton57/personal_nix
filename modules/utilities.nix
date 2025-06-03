@@ -28,6 +28,7 @@
     pkgs.cudaPackages.cudnn
 
     # Unorganized
+    pkgs.dotnetCorePackages.sdk_8_0_3xx
     pkgs.nvtopPackages.full
     pkgs.deno
     pkgs.cmake
