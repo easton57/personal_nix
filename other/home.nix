@@ -18,6 +18,12 @@
     EDITOR = "nvim";
   };
 
+  programs.git = {
+    enable = true;
+    userName = "Easton Seidel";
+    userEmail = "eseidel1357@gmail.com";
+  };
+
   home.stateVersion = "25.05";
 }
 
