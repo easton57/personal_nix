@@ -2,8 +2,14 @@
 
 {
   imports = [
-    ./modules/graphics.nix
     ./modules/games.nix
+    ./modules/graphics.nix
+    ./modules/hypr.nix
+    ./modules/internet.nix
+    ./modules/media.nix
+    ./modules/office.nix
+    ./modules/security.nix
+    ./modules/utilities.nix
   ];
 
   # Allow unfree
