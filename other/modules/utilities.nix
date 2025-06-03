@@ -19,6 +19,7 @@
     pkgs.cudaPackages.cudnn
 
     # Unorganized
+    pkgs.docker
     pkgs.virt-manager
     pkgs.dotnetCorePackages.sdk_8_0_3xx
     pkgs.nvtopPackages.full
