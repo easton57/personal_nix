@@ -8,3 +8,7 @@ nix-channel --update
 # Generate initial config
 nix-shell '<home-manager>' -A install
 
+# Add unstable
+nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
+nix-channel --update
+
