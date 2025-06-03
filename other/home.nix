@@ -5,8 +5,13 @@
     ./modules/graphics.nix
   ];
 
+  # Allow unfree
+  config.allowUnfree = true;
+
+  # Allow home-manager
   programs.home-manager.enable = true;
 
+  # Home settings
   home.username = "eseidel";
   home.homeDirectory = "/home/eseidel";
 
