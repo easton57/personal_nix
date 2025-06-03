@@ -6,7 +6,7 @@
   ];
 
   # Allow unfree
-  config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # Allow home-manager
   programs.home-manager.enable = true;
