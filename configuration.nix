@@ -44,8 +44,8 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Auto Upgrade
-  system.autoUpgrade.enable = true;
-  system.autoUpgrade.allowReboot  = true;
+  # system.autoUpgrade.enable = true;
+  # system.autoUpgrade.allowReboot  = true;
 
   # Generation retention and optimization
   nix = {
