@@ -14,3 +14,7 @@ nix-channel --update
 
 # Install hyprland
 sudo dnf install -y hyprland
+
+# link files
+ln -sf ~/.config/home-manager/home.nix ~/Configuration/personal_nix/other/home.nix 
+ln -sf ~/.config/home-manager/ ~/Configuration/personal_nix/other/modules

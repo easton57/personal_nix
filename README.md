@@ -36,3 +36,6 @@ tree_sitter and utf8proc are needed as the stable versions available aren't comp
 * neovim.nix
 * tree_sitter.nix
 * utf8proc.nix
+
+# Folders
+nixos config is for nixos other is for anything else (be sure to change the hyprland install to apt or dnf or whatever depending on your distro)
